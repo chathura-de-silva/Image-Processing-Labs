@@ -1,5 +1,5 @@
-# Image-Processing-Labs
-Lab exercises covered under " CS3713-Image Processing" module in semester 5, UOM CSE, which had coding involved.
+![banner](./banner.png)
+*   This repository contains Lab exercises covered under " CS3713-Image Processing" module in semester 5, UOM CSE, which had coding involved.
 
 
 ## Point Operations
@@ -18,4 +18,16 @@ A Python script to carry out the following operations:
 *   grid (2,3): Vertical mirror image of the unprocessed image
 
 
-(OpenCV library, only for loading the source image and saving your output.  No other libraries (except for matplotlib, numpy))
+(OpenCV library, only for loading the source image and saving your output.  No other libraries (except for matplotlib, numpy)).
+
+### Instructions for Running
+* Python version 3.12 is recommended. Install the dependencies from `requirements.txt`.
+
+*   There are two versions with more or less the same code.
+    1. Jupyter Notebook Version
+    2. Regular `.py` Script.
+
+*   Put the preffered image inside `/assets` directory. 
+*   Change the image path in the python code or just rename your image as `inputImg1.jpg`.
+*   If you are running the python script, make sure to cd in to the `/Point Operations` or change the image path accordingly. Otherwise the script will fail with `Error: Image not found.` message.
+*   You may have to adjust the `figsize` parameter of the code which specifies figure width and height respectively according to your input image aspect ratio.
