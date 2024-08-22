@@ -34,12 +34,12 @@ vertical_mirror_img = np.array([arr[::-1] for arr in gray_img])
 # Displaying all the Numpy 2D arrays as Grayscale Images with titles.
 
 fig, axs = plt.subplots(nrows=3, ncols=2, figsize=(6, 14));
-axs[0,0].imshow(gray_img, cmap="gray");
-axs[1,0].imshow(negative_img, cmap="gray");
-axs[2,0].imshow(bright_img, cmap="gray");
+axs[0,0].imshow(gray_img, cmap="gray", vmin=0,vmax=255);
+axs[1,0].imshow(negative_img, cmap="gray", vmin=0,vmax=255);
+axs[2,0].imshow(bright_img, cmap="gray", vmin=0,vmax=255);
 axs[0,1].imshow(low_contrast_img, cmap="gray", vmin=0,vmax=255);
-axs[1,1].imshow(low_bpp_img*(255/15), cmap="gray");
-axs[2,1].imshow(vertical_mirror_img,cmap="gray" );
+axs[1,1].imshow(low_bpp_img*(255/15), cmap="gray", vmin=0,vmax=255);
+axs[2,1].imshow(vertical_mirror_img,cmap="gray", vmin=0,vmax=255 );
 
 
 axs[0,0].set_title("Grayscale Unprocessed");
