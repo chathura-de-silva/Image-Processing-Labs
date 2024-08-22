@@ -50,11 +50,11 @@ axs[1,1].set_title("Low BPP");
 axs[2,1].set_title("Vertical Mirror");
 
 # Saving images
-cv.imwrite('subPlot11.jpg',gray_img ) # Saving as an image.
-cv.imwrite('subPlot12.jpg',negative_img ) # Saving as an image.
-cv.imwrite('subPlot13.jpg',bright_img ) # Saving as an image.
-cv.imwrite('subPlot21.jpg',low_contrast_img ) # Saving as an image.
-cv.imwrite('subPlot22.jpg',low_bpp_img*(255/15) ) # Saving as an image. # Scaled 4 bit data to 8 bit.
-cv.imwrite('subPlot23.jpg',vertical_mirror_img ) # Saving as an image.
+cv.imwrite('./assets/subPlot11.jpg',gray_img ) # Saving as an image.
+cv.imwrite('./assets/subPlot12.jpg',negative_img ) # Saving as an image.
+cv.imwrite('./assets/subPlot13.jpg',bright_img ) # Saving as an image.
+cv.imwrite('./assets/subPlot21.jpg',low_contrast_img ) # Saving as an image.
+cv.imwrite('./assets/subPlot22.jpg',low_bpp_img*(255/15) ) # Saving as an image. # Scaled 4 bit data to 8 bit.
+cv.imwrite('./assets/subPlot23.jpg',vertical_mirror_img ) # Saving as an image.
 
 plt.show();

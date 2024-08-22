@@ -31,3 +31,27 @@ A Python script to carry out the following operations:
 *   Change the image path in the python code or just rename your image as `inputImg1.jpg`.
 *   If you are running the python script, make sure to cd in to the `/Point Operations` or change the image path accordingly. Otherwise the script will fail with `Error: Image not found.` message.
 *   You may have to adjust the `figsize` parameter of the code which specifies figure width and height respectively according to your input image aspect ratio.
+
+<p align="center"><img src="./Point Operations/assets/inputImg1.jpg" width=150></p>
+<table>
+    <tr>
+        <td><img src="./Point Operations\assets\subPlot11.jpg" alt="Image 1" width="200"></td>
+        <td><img src="./Point Operations\assets\subPlot12.jpg" alt="Image 2" width="200"></td>
+        <td><img src="./Point Operations\assets\subPlot13.jpg" alt="Image 3" width="200"></td>
+    </tr>
+    <tr>
+        <td>Grayscale</td>
+        <td>Negative</td>
+        <td>Brighten</td>
+    </tr>
+    <tr>
+        <td><img src="./Point Operations\assets\subPlot21.jpg" alt="Image 4" width="200"></td>
+        <td><img src="./Point Operations\assets\subPlot22.jpg" alt="Image 5" width="200"></td>
+        <td><img src="./Point Operations\assets\subPlot23.jpg" alt="Image 6" width="200"></td>
+    </tr>
+    <tr>
+        <td>Low Contrast</td>
+        <td>4 BPP</td>
+        <td>Flip</td>
+    </tr>
+</table>
