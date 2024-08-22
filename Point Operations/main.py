@@ -20,7 +20,6 @@ gray_img = np.round(0.114 * img[:, :, 0] + 0.587 * img[:, :, 1] + 0.299 * img[:,
 plt.imshow(gray_img, cmap='gray')
 plt.title('Grayscale Image')
 plt.show()
-cv.imwrite('grayscaleImg.jpg',gray_img ) # Saving as an image.
 
 # Manipulating the grayscale image applying required point operations.
 # `low_bpp_img` now has now 4 bit data logically. 
