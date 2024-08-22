@@ -27,7 +27,7 @@ cv.imwrite('grayscaleImg.jpg',gray_img ) # Saving as an image.
 # When plotting the low bpp one, will have to scale this back to 0-255. Still the image will only have 4 bit worth actual data.
 
 negative_img = 255-gray_img;
-bright_img = np.clip(np.round(gray_img * 1.2), 0, 255).astype(np.uint8);
+bright_img = np.clip(np.round(gray_img.astype(np.uint16) * 1.2), 0, 255).astype(np.uint8); # Avoiding overflow by converting to uint16
 low_contrast_img = np.round(125+ ((10/51)*gray_img)).astype(np.uint8);
 low_bpp_img = np.floor(gray_img/(16)).astype(np.uint8);  
 vertical_mirror_img = gray_img[::-1]
@@ -55,7 +55,7 @@ cv.imwrite('subPlot11.jpg',gray_img ) # Saving as an image.
 cv.imwrite('subPlot12.jpg',negative_img ) # Saving as an image.
 cv.imwrite('subPlot13.jpg',bright_img ) # Saving as an image.
 cv.imwrite('subPlot21.jpg',low_contrast_img ) # Saving as an image.
-cv.imwrite('subPlot22.jpg',low_bpp_img ) # Saving as an image.
+cv.imwrite('subPlot22.jpg',low_bpp_img*(255/15) ) # Saving as an image. # Scaled 4 bit data to 8 bit.
 cv.imwrite('subPlot23.jpg',vertical_mirror_img ) # Saving as an image.
 
 plt.show();
