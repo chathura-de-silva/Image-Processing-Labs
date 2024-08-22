@@ -50,4 +50,12 @@ axs[0,1].set_title("Low Contrast");
 axs[1,1].set_title("Low BPP");
 axs[2,1].set_title("Vertical Mirror");
 
+# Saving images
+cv.imwrite('subPlot11.jpg',gray_img ) # Saving as an image.
+cv.imwrite('subPlot12.jpg',negative_img ) # Saving as an image.
+cv.imwrite('subPlot13.jpg',bright_img ) # Saving as an image.
+cv.imwrite('subPlot21.jpg',low_contrast_img ) # Saving as an image.
+cv.imwrite('subPlot22.jpg',low_bpp_img ) # Saving as an image.
+cv.imwrite('subPlot23.jpg',vertical_mirror_img ) # Saving as an image.
+
 plt.show();
