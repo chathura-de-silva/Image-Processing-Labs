@@ -38,7 +38,7 @@ fig, axs = plt.subplots(nrows=3, ncols=2, figsize=(6, 14));
 axs[0,0].imshow(gray_img, cmap="gray");
 axs[1,0].imshow(negative_img, cmap="gray");
 axs[2,0].imshow(bright_img, cmap="gray");
-axs[0,1].imshow(low_contrast_img, cmap="gray");
+axs[0,1].imshow(low_contrast_img, cmap="gray", vmin=0,vmax=255);
 axs[1,1].imshow(low_bpp_img*(255/15), cmap="gray");
 axs[2,1].imshow(vertical_mirror_img,cmap="gray" );
 
