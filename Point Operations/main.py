@@ -29,7 +29,7 @@ negative_img = 255-gray_img;
 bright_img = np.clip(np.round(gray_img.astype(np.uint16) * 1.2), 0, 255).astype(np.uint8); # Avoiding overflow by converting to uint16
 low_contrast_img = np.round(125+ ((10/51)*gray_img)).astype(np.uint8);
 low_bpp_img = np.floor(gray_img/(16)).astype(np.uint8);  
-vertical_mirror_img = gray_img[::-1]
+vertical_mirror_img = np.array([arr[::-1] for arr in gray_img])
 
 # Displaying all the Numpy 2D arrays as Grayscale Images with titles.
 
