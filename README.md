@@ -35,9 +35,9 @@ A Python script to carry out the following operations:
 <p align="center"><img src="./Point Operations/assets/inputImg1.jpg" width=150></p>
 <table>
     <tr>
-        <td><img src="./Point Operations\assets\subPlot11.jpg" alt="Image 1" width="200"></td>
-        <td><img src="./Point Operations\assets\subPlot12.jpg" alt="Image 2" width="200"></td>
-        <td><img src="./Point Operations\assets\subPlot13.jpg" alt="Image 3" width="200"></td>
+        <td><img src="./Point Operations\assets\subPlot11.jpg" alt="Image 1" width="1600"></td>
+        <td><img src="./Point Operations\assets\subPlot12.jpg" alt="Image 2" width="1600"></td>
+        <td><img src="./Point Operations\assets\subPlot13.jpg" alt="Image 3" width="1600"></td>
     </tr>
     <tr>
         <td>Grayscale</td>
@@ -45,9 +45,9 @@ A Python script to carry out the following operations:
         <td>Brighten</td>
     </tr>
     <tr>
-        <td><img src="./Point Operations\assets\subPlot21.jpg" alt="Image 4" width="200"></td>
-        <td><img src="./Point Operations\assets\subPlot22.jpg" alt="Image 5" width="200"></td>
-        <td><img src="./Point Operations\assets\subPlot23.jpg" alt="Image 6" width="200"></td>
+        <td><img src="./Point Operations\assets\subPlot21.jpg" alt="Image 4" width="1600"></td>
+        <td><img src="./Point Operations\assets\subPlot22.jpg" alt="Image 5" width="1600"></td>
+        <td><img src="./Point Operations\assets\subPlot23.jpg" alt="Image 6" width="1600"></td>
     </tr>
     <tr>
         <td>Low Contrast</td>
