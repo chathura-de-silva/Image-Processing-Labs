@@ -55,3 +55,118 @@ A Python script to carry out the following operations:
         <td>Flip</td>
     </tr>
 </table>
+
+
+## Linear Filters
+
+ Predefined filters are applied to a grayscale image. The goal of this lab is to use custom filters to perform various image processing tasks such as edge detection, blurring, and sharpening.
+
+### Exercise Description
+
+In this lab, you are required to:
+
+1. **Load a color image** (in JPG or PNG format) from the disk and convert it to an 8-bpp grayscale format.
+2. **Apply four different filters** to the grayscale image. The filters are provided as numpy arrays.
+3. **Save the filtered images** to disk with appropriate filenames.
+
+### Provided Filters
+
+The following filters are provided as 5x5 numpy arrays:
+
+1. **Filter 1 (Filter A) - Laplacian of Gaussian (LoG) Filter:**
+    ```python
+    filter1 = normalize_filter(np.array([
+        [0, -1, -1, -1, 0],
+        [-1, 2, 2, 2, -1],
+        [-1, 2, 8, 2, -1],
+        [-1, 2, 2, 2, -1],
+        [0, -1, -1, -1, 0]
+    ]))
+    ```
+
+2. **Filter 2 (Filter B) - Gaussian Blur Filter:**
+    ```python
+    filter2 = normalize_filter(np.array([
+        [1, 4, 6, 4, 1],
+        [4, 16, 24, 16, 4],
+        [6, 24, 36, 24, 6],
+        [4, 16, 24, 16, 4],
+        [1, 4, 6, 4, 1]
+    ]))
+    ```
+
+3. **Filter 3 (Filter C) - Uniform Box Filter:**
+    ```python
+    filter3 = normalize_filter(np.array([
+        [5, 5, 5, 5, 5],
+        [5, 5, 5, 5, 5],
+        [5, 5, 5, 5, 5],
+        [5, 5, 5, 5, 5],
+        [5, 5, 5, 5, 5]
+    ]))
+    ```
+
+4. **Filter 4 (Filter D) - Sharpening Filter (High-Boost Filter):**
+    ```python
+    filter4 = normalize_filter(np.array([
+        [0, -1, -1, -1, 0],
+        [-1, 2, 2, 2, -1],
+        [-1, 2, 16, 2, -1],
+        [-1, 2, 2, 2, -1],
+        [0, -1, -1, -1, 0]
+    ]))
+    ```
+
+## Requirements
+
+- OpenCV (for loading the source image and saving the output images)
+- Numpy
+
+## Installation
+
+To run the script, you need to install the required libraries. You can install them using `pip`:
+
+```bash
+pip install numpy opencv-python
+```
+
+Usage
+Place your source image (in JPG or PNG format) in the repository directory.
+
+Edit the script specifying the path to your image.
+```python
+img = cv.imread('{path-to-your-image}')
+```
+*   If you are running the python script, make sure to cd in to the `/Point Operations` or change the image path accordingly. Otherwise the script will fail with `Error: Image not found.` message.
+
+Run the apply_filters.py script using Python:
+
+
+The script will apply each filter to the grayscale image and save the resulting images to disk with filenames indicating the filter used.
+
+<table>
+    <tr>
+        <td><img src="./Linear Filters/road98.png" alt="Image 1" width="1600"></td>
+        <td><img src="./Linear Filters/original.jpg" alt="Image 2" width="1600"></td>
+    </tr>
+    <tr>
+        <td>Input Image</td>
+        <td>Grayscale (Original)</td>
+    </tr>
+     <tr>
+        <td><img src="./Linear Filters/filterA.jpg" alt="Image 1" width="1600"></td>
+        <td><img src="./Linear Filters/filterB.jpg" alt="Image 2" width="1600"></td>
+    </tr>
+    <tr>
+        <td>LoG Filter</td>
+        <td>Gaussian Blue Filter</td>
+    </tr>
+    <tr>
+        <td><img src="./Linear Filters/filterC.jpg" alt="Image 3" width="1600"></td>
+        <td><img src="./Linear Filters/filterD.jpg" alt="Image 4" width="1600"></td>
+    </tr>
+    <tr>
+        <td>Uniform Box Filter</td>
+        <td>Hight Boost Filter</td>
+    </tr>
+</table>
