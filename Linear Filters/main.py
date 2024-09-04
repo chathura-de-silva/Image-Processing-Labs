@@ -85,8 +85,15 @@ def apply_filter_and_save_image(img_filter, img_name):
     print(new_img)
     cv.imwrite('./'+img_name,new_img ) # Saving as an image.
 
-apply_filter_and_save_image(filter1, 'filter1.jpg')
-apply_filter_and_save_image(filter2, 'filter2.jpg')
-apply_filter_and_save_image(filter3, 'filter3.jpg')
-apply_filter_and_save_image(filter4, 'filter4.jpg')
+apply_filter_and_save_image(filter1, 'filterA.jpg')
+apply_filter_and_save_image(filter2, 'filterB.jpg')
+apply_filter_and_save_image(filter3, 'filterC.jpg')
+apply_filter_and_save_image(filter4, 'filterD.jpg')
 
+def calcRms(original, edited):
+    return np.sqrt(np.mean(np.square(original - edited)))
+
+print(f"RMS for Filter A: {calcRms(original_img, cv.imread('./filterA.jpg', cv.IMREAD_GRAYSCALE))}")
+print(f"RMS for Filter B: {calcRms(original_img, cv.imread('./filterB.jpg', cv.IMREAD_GRAYSCALE))}")
+print(f"RMS for Filter C: {calcRms(original_img, cv.imread('./filterC.jpg', cv.IMREAD_GRAYSCALE))}")
+print(f"RMS for Filter D: {calcRms(original_img, cv.imread('./filterD.jpg', cv.IMREAD_GRAYSCALE))}")
